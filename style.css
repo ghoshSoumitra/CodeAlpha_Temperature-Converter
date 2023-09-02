@@ -142,6 +142,7 @@ h3 {
     }
     #result{
         width: 90%;
+       height: 6vh;
     }
     #input{
         width: 70%;
