@@ -55,7 +55,7 @@
             var val=document.getElementById('input')
             var inputval=parseFloat(val.value)
             var resultcontainer=document.getElementById('result')
-           
+            resultcontainer.style.display="block"
             var option1=document.getElementById('options-from')
             var option1val=option1.value
             var option2=document.getElementById('options-To')
@@ -64,7 +64,7 @@
             if(option1val==="Centigrade" && option2val=== "farenheit"){
                 let f;
                 f=((9*inputval)/5)+32
-                resultcontainer.style.display="block"
+                
                 var res=document.getElementById('res')
                 res.innerText="Converted temperature is "+f.toFixed(2)+" "+"deg farenheit"
             }else if(option1val==="farenheit" && option2val==="Centigrade"){
