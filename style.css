@@ -28,14 +28,14 @@ h1 {
     height: 40vh;
     border-radius: 20px;
     box-shadow: 4px 4px 8px white, -4px -4px 8px white;
-    /* margin: 20px; Add margin for spacing */
+  
 }
 
 .temp {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin: 20px; Add margin for spacing */
+   
 }
 
 .options {
@@ -107,30 +107,30 @@ h3 {
     margin-top: 1vh;
 }
 
-/* Add a media query for responsiveness */
+/* media query for responsiveness */
 @media screen and (max-width: 1100px) {
     .main {
         min-height: auto;
     }
 
     .undermain {
-        width: 90%; /* Adjust width for smaller screens */
-        margin: 10px; /* Adjust margin for spacing */
+        width: 90%;
+        margin: 10px; 
     }
 
     .temp {
-        margin: 10px; /* Adjust margin for spacing */
+        margin: 10px; 
     }
 
     .options {
-        width: 100%; /* Adjust width for smaller screens */
-        margin-left: 0; /* Remove negative margin */
+        width: 100%; 
+        margin-left: 0; 
     }
 
     #options-from,
     #options-To {
-        width: 100%; /* Adjust width for smaller screens */
-        margin-right: 0; /* Remove right margin */
+        width: 100%;
+        margin-right: 0; 
     }
 
     .inputarea {
