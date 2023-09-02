@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Temperature Converter</h1><hr>
+    <div class="main">
+        <div class="undermain">
+     
+        <div class="temp">
+            <h3 >Select the conversion type</h3>
+            <div class="options">
+                <div class="option1">
+                    <h3>From:</h3>
+                    <select id="options-from">
+                        <option >Centigrade</option>
+                        <option >farenheit</option>
+                        <option >Kelvin</option>
+                    </select>
+                </div>
+               <div class="option1">
+                <h3>To:</h3>
+                <select id="options-To">
+                    <option >Centigrade</option>
+                    <option >farenheit</option>
+                    <option >Kelvin</option>
+                </select>
+               </div>
+               
+            </div>
+        
+        </div>
+
+        <div class="inputarea">
+            <input type="number" placeholder="Enter  temp" id="input">
+            <button onclick="convert()">Convert</button>
+        </div>
+      
+        <div id="result">
+            <h4 id="res">
+               
+            </h4>
+        </div>
+               
+    </div>
+    </div>
+    
+    <script>
+        
+        function convert(inputval){
+            var val=document.getElementById('input')
+            var inputval=parseFloat(val.value)
+            var resultcontainer=document.getElementById('result')
+           
+            var option1=document.getElementById('options-from')
+            var option1val=option1.value
+            var option2=document.getElementById('options-To')
+            var option2val=option2.value
+
+            if(option1val==="Centigrade" && option2val=== "farenheit"){
+                let f;
+                f=((9*inputval)/5)+32
+                resultcontainer.style.display="block"
+                var res=document.getElementById('res')
+                res.innerText="Converted temperature is "+f.toFixed(2)+" "+"deg farenheit"
+            }else if(option1val==="farenheit" && option2val==="Centigrade"){
+                let c;
+                 c=((inputval-32)*5)/9;
+            console.log(c)
+            var res=document.getElementById('res')
+            res.innerText="Converted temperature is "+c.toFixed(2)+" "+"deg centigrade"
+
+            }else if(option1val==="Centigrade" && option2val==="Kelvin"){
+                let k;
+                k=inputval+273.15;
+                var res=document.getElementById('res')
+                res.innerText="Converted temperature is "+k.toFixed(2)+" "+"deg Kelvin"
+            }
+            else if(option1val==="Kelvin" && option2val==="Centigrade"){
+                let c;
+                c=inputval-273.15;
+                var res=document.getElementById('res')
+                res.innerText="Converted temperature is "+c.toFixed(2)+" "+"deg Centigrade"
+            }
+            else if(option1val==="farenheit" && option2val==="Kelvin"){
+                let k;
+                k=(((inputval-32)*5)/9)+273.15;
+                var res=document.getElementById('res')
+                res.innerText="Converted temperature is "+k.toFixed(2)+" "+"deg Kelvin"
+            }
+            else if(option1val==="Kelvin" && option2val==="farenheit"){
+                let f;
+                f=(((inputval-273.15)*9)/5)+32;
+                var res=document.getElementById('res')
+                res.innerText="Converted temperature is "+f.toFixed(2)+" "+"deg Kelvin"
+            }
+            else if(option1val===option2val){
+                var res=document.getElementById('res')
+                res.innerText="Please select valid temperature Unit"
+            }
+             
+        }
+    </script>
+</body>
+</html>
